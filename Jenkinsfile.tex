@@ -1,0 +1,16 @@
+pipeline{
+	agent any
+	
+	
+	stages{
+		stage{
+			git checkout "url"
+			}
+		stage{
+			mvn clean install
+			}
+		stage{
+			mvn sonar:sonar
+			}
+			}
+			}
